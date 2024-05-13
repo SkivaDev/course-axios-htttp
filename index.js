@@ -8,5 +8,13 @@ const getUsers = async () => {
     console.log(response);
 }
 
-getUsers()
+const postRegister = async () => {
+    const response = await axios.post('https://reqres.in/api/register', {
+        email: 'eve.holt@reqres.in',
+        password: 'pistol'
+    })
+    console.log(response);
+}
 
+getUsers();
+postRegister();
