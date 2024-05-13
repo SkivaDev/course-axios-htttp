@@ -16,5 +16,21 @@ const postRegister = async () => {
     console.log(response);
 }
 
+const putUser = async () => {
+    const response = await axios.put('https://jsonplaceholder.typicode.com/users/1', {
+        name: 'John Doe'
+    })
+    console.log(response);
+}
+
+const patchUser = async () => {
+    const response = await axios.patch('https://jsonplaceholder.typicode.com/users/1', {
+        name: 'John Doe'
+    })
+    console.log(response);
+}
+
 getUsers();
 postRegister();
+putUser();
+patchUser();
