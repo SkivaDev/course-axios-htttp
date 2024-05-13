@@ -30,7 +30,13 @@ const patchUser = async () => {
     console.log(response);
 }
 
+const deleteUser = async () => {
+    const response = await axios.delete('https://jsonplaceholder.typicode.com/users/1')
+    console.log(response);
+}
+
 getUsers();
 postRegister();
 putUser();
 patchUser();
+deleteUser();
