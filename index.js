@@ -35,8 +35,9 @@ const deleteUser = async () => {
     console.log(response);
 }
 
-getUsers();
-postRegister();
-putUser();
-patchUser();
-deleteUser();
+
+Promise.all([getUsers(), postRegister(), putUser(), patchUser(), deleteUser()]).then(res => {
+    console.log(res);
+}).catch((error) => {
+    console.log('Error:', error);
+});
